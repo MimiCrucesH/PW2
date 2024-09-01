@@ -8,3 +8,4 @@ console.log(frutas[1]);
 console.log(frutas[8]);
 // ver tamaño de longitud
 console.log(frutas.length);
+
