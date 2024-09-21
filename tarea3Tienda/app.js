@@ -19,7 +19,7 @@ function menu(){
 // Funcion para agregar una camisa a la lista del carrito
 function AgregaCamisa(){
     let camisa = {
-        nombre:"camisa",
+        nombre:"Camisa",
         precio: 300
     };
     carrito.push(camisa);
@@ -65,8 +65,12 @@ function verCarrito(){
     if(carrito.length === 0){
         alert("No hay nada en el carrito");
     }else{
-        console.log(carrito);
-        console.log(total);
+        let mensajeCarrito = "Articulos del carrito :\n "
+        carrito.forEach((objeto,index)=>{
+            mensajeCarrito+=`${index+1}.- ${objeto.nombre} - $ ${objeto.precio}\n `;
+        });
+        mensajeCarrito+="Total: $"+total;
+        console.log(mensajeCarrito);
     }
 }
 
