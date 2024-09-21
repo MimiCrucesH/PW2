@@ -4,7 +4,7 @@ let carrito = [];
 // Variable global para guardar el total a pagar
 let total = 0;
 
-// Funcion para mostrar el menú al inicio y obtener la instruccion
+// Funcion para mostrar el menú al inicio y obtener la instruccion elegida por el usuario
 function menu(){
     return parseInt(prompt(`Seleccione un producto para agregar al carrito 🛒 :
         1.- Camisa 👕 - $300
@@ -12,7 +12,7 @@ function menu(){
         3.- Zapatos 🥿- $800
         4.- Sombrero 👒 - $200
         5.- Ver carrito y Total 👀🛒
-        6.- Salir
+        6.- Salir 👋🐶
         `))
 }
 
@@ -30,11 +30,11 @@ function AgregaCamisa(){
 // Funcion para agregar una pantalon a la lista del carrito
 function AgregaPantalon(){
     let pantalon = {
-        nombre:"Pantalon",
+        nombre:"Pantalón",
         precio: 500
     };
     carrito.push(pantalon);
-    console.log("Producto Pantalon agregado al carrito");
+    console.log("Producto Pantalón agregado al carrito");
     total += pantalon.precio;
 }
 
@@ -65,21 +65,23 @@ function verCarrito(){
     if(carrito.length === 0){
         alert("No hay nada en el carrito");
     }else{
-        let mensajeCarrito = "Articulos del carrito :\n "
+        let mensajeCarrito = "Articulos del carrito : \n\n";
         carrito.forEach((objeto,index)=>{
             mensajeCarrito+=`${index+1}.- ${objeto.nombre} - $ ${objeto.precio}\n `;
         });
-        mensajeCarrito+="Total: $"+total;
+        mensajeCarrito+="\nTotal: $"+total;
         console.log(mensajeCarrito);
+        alert(mensajeCarrito);
     }
 }
 
 // Funcion para llevar el control de la tienda (flujo del programa)
 function control(){
-    //
+    // Variable para controlar el bucle
     let continuar = true;
     while(continuar){
-        let opc = menu();
+        let opc = menu(); // muestra el menu y obtiene la opcion del usuario
+        // Ejecuta la accion segun la opcion elegida
         switch(opc){
             case 1:
                 AgregaCamisa();
@@ -97,12 +99,13 @@ function control(){
                 verCarrito();
                 break;
             case 6:
-                alert("Saliendo del programa");
+                alert("Saliendo del programa 🐕");
                 continuar = false;
                 break;
             default:
-                alert("Opcion no valida. Intenta nuevamente");
+                alert("Opcion no válida. Intenta nuevamente  😀");
         }
     }
 }
+//Llamara a la funcion control para iniciar el programa
 control();
