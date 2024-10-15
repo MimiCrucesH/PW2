@@ -1,0 +1,15 @@
+.Calculadora{
+width: 300px;
+margin: 500px auto;
+border: 1px solid violet;
+border-radius: 5px;
+background-color: pink;
+}
+input[type="button"] {
+    width: 60px;
+    height: 60px;
+    margin: 5px;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;   
+}
