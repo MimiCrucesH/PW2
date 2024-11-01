@@ -1,0 +1,68 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #82a9d5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+}
+
+h1 {
+    color: #333;
+}
+
+.button-container {
+    margin-top: 20px;
+}
+
+.btn {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 10px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.Calculadora{
+    width: 300px;
+    margin: 500px auto;
+    border: 1px solid violet;
+    border-radius: 5px;
+    background-color: pink;
+}
+input[type="button"] {
+    width: 60px;
+    height: 60px;
+    margin: 5px;
+    border-radius: 5px;
+    font-size: 40px;
+    cursor: pointer;   
+}
+#Pantalla {
+    width: 100%; /* Ajusta el ancho al 100% del contenedor */
+    padding: 10px; /* Agrega un poco de espacio interno */
+    border: 1px solid #ccc; /* Añade un borde */
+    border-radius: 5px; /* Redondea las esquinas */
+    font-size: 16px; /* Tamaño de fuente */
+    box-sizing: border-box; /* Asegura que el padding y el borde no afecten el ancho total */
+    background-color: rgb(254, 214, 221);
+}
+

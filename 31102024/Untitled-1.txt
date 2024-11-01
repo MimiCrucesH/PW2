@@ -1,0 +1,5 @@
+funcion call back - Una funcion que se pasa como argumento en otra funcion
+ Forma clasica de manejar codigo de forma asincrona
+funcion asincrona - Lecutura de archivos, temporizadores. Que el codigo se ejecute sin bloquear el flujo
+
+java script se compila no se interpeta
