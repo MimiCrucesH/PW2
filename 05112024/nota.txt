@@ -1,0 +1,17 @@
+Proyecto: Editar y Eliminar usuario
+node se basa en javaScript
+
+formato mjs.Codigo fuente de javaScript
+html para lo que es estatico
+css para estilos
+JS para manejar html y css
+Mjs para una estructura mas limpia y meter sintaxis de java scripr y traer datos de una BD
+
+Metodo POST Y GET
+BD ??
+
+Promesas. Sin necesidad de anidas funciones callback. Maneja funciones asincronas
+es otra forma d eutilizarlas
+Pendiente. La funcion asincrona no se ha completado
+Resuelta
+Rechazada. 
