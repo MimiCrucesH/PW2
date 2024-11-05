@@ -1,0 +1,16 @@
+{
+  "name": "proyectofinal",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Mimi Cruces",
+  "license": "ISC",
+  "description": "proyecto Final. Uso de tecnologia de express y mysql2",
+  "dependencies": {
+    "express": "^4.21.1",
+    "mysql2": "^3.11.3"
+  }
+}
