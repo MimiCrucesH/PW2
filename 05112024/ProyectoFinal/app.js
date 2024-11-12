@@ -85,3 +85,39 @@ app.post('/add',(req, res)=>{
     }));
 
 });
+
+//Editar usuario
+
+app.get('/edit/:id',(req,res)=>{
+    //Mandar a traer el id
+    const {id} = req.params;
+    // Generar la consulta
+    const query = 'SELECT * FROM userrs WHERE id = ?';
+    //Enviar la consulta, anclar id,error, resultado
+    db.query(query,[id],(err, results)=>{
+        if(err){
+            console.error('Error en la BD');
+            res.send("Error en la BD");
+        }else{
+            // solo 1 pok solo hay un registro con ese id
+            // para pasarlos a la vista edit
+            res.render('/edit',{user:results[0]});
+        }
+
+    });
+});
+
+//Eliminar usuario
+app.get('/delete/:id',(req, res)=>{
+    const {id} = req.params;
+    const query = `DELETE FROM users WHERE id =?`;
+    db.query(query,[id],(err)=>{
+        if(err){
+            console.error('Error en el delete');
+            res.send("error al eliminar");
+        }else{
+            res.redirect('/');
+        }
+
+    });
+})
