@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Configuraciones básicas de la página -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyecto W2</title>
+    <!-- Favicon e integración de CSS -->
     <link rel="shortcut icon" href="favicon.jpg" type="image/x-icon">
     <link rel="stylesheet" href="estilos.css">
 </head>
@@ -11,10 +13,9 @@
     <header>
         <h1>Listar Usuarios</h1>
     </header>
-    
     <main>
         <section>
-            <table>
+            <table> <!-- Tabla de usuarios -->
                 <thead>
                     <tr>
                         <th>ID</th>
@@ -24,13 +25,13 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <!-- JS -->
+                    <!-- Bloque EJS para iterar usuarios -->
                     <% users.forEach(user => { %>
-                    <tr>
+                    <tr>  <!-- Mostrar datos de cada usuario -->
                         <td><%= user.id %></td>
                         <td><%= user.name %></td>
                         <td><%= user.email %></td>
-                        <td>
+                        <td> <!-- Links de Editar y Eliminar -->
                             <a href="/edit/<%= user.id %>" class="edit">Editar 📝</a>
                             <a href="/delete/<%= user.id %>" class="delete">Eliminar 🗑️</a>
                         </td>
@@ -38,7 +39,7 @@
                     <% }); %>
                 </tbody>
             </table>
-            <div>
+            <div> <!-- Botón para agregar nuevo usuario -->
                 <a href="/agregar-usuario" class="agregar">Agregar➕</a>
             </div>
             
